@@ -1,0 +1,33 @@
+.user-menu {
+  position: absolute;
+  top: 70%;
+  right: 0;
+  width: 100%;
+  background-color: var(--color-white);
+  opacity: 0;
+  transition: all 0.3s;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__item {
+    border-top: var(--line);
+  }
+
+  &__link,
+  &__link:link,
+  &__link:visited {
+    cursor: pointer;
+    color: inherit;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+
+    &:hover {
+      background-color: var(--color-grey-light-2);
+      padding: 1rem 0 1rem 4rem;
+    }
+  }
+}

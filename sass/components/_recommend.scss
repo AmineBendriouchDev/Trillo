@@ -1,0 +1,34 @@
+.recommend {
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+  display: flex;
+  align-items: center;
+
+  @include respond(smallest) {
+    flex-direction: column;
+  }
+
+  &__count {
+    margin-right: auto;
+  }
+
+  &__friends {
+    display: flex;
+
+    @include respond(smallest) {
+      margin-top: 1rem;
+    }
+  }
+
+  &__picture {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid var(--color-white);
+
+    &:not(:last-child) {
+      margin-right: -2rem;
+    }
+  }
+}

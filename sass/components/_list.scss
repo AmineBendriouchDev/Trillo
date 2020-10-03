@@ -1,0 +1,45 @@
+.list {
+  margin: 3rem 0;
+  list-style: none;
+  padding: 3rem 0;
+  border-top: var(--line);
+  border-bottom: var(--line);
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    flex: 0 0 50%;
+    display: flex;
+    align-items: center;
+
+    @include respond(smallest) {
+      flex: 0 0 100%;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0.7rem;
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      height: 1rem;
+      width: 1rem;
+      margin: 0.7rem;
+
+      // Older Browsers
+      background-image: url('../img/chevron-thin-right.svg');
+      background-size: cover;
+
+      // Newer Browsers
+      @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+        background-color: var(--color-primary);
+        -webkit-mask-image: url('../img/chevron-thin-right.svg');
+        mask-image: url('../img/chevron-thin-right.svg');
+        -webkit-mask-size: cover;
+        mask-size: cover;
+        background-image: none;
+      }
+    }
+  }
+}

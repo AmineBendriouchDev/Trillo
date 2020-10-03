@@ -1,0 +1,17 @@
+.description {
+  flex: 0 0 60%;
+  margin-right: 4.5rem;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+
+  @include respond(medium) {
+    padding: 2rem;
+    margin-right: 3rem;
+  }
+
+  @include respond(small) {
+    margin-right: 0;
+    margin-bottom: 3rem;
+  }
+}

@@ -1,0 +1,66 @@
+.review {
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden;
+
+  @include respond(medium) {
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  &__text {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+
+    &--picture {
+      height: 4.5rem;
+      width: 4.5rem;
+      border-radius: 50%;
+    }
+
+    &--box {
+      margin-left: 1.5rem;
+      margin-right: auto;
+    }
+
+    &--name {
+      text-transform: uppercase;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--color-grey-dark-1);
+    }
+
+    &--date {
+      font-size: 1rem;
+      color: var(--color-grey-dark-3);
+    }
+
+    &--rating {
+      font-size: 2.5rem;
+      font-weight: 300;
+      color: var(--color-primary);
+    }
+  }
+
+  &::before {
+    content: '\201C';
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    font-size: 20rem;
+    line-height: 1;
+    color: var(--color-grey-light-2);
+    font-family: sans-serif;
+    z-index: 0;
+  }
+}
